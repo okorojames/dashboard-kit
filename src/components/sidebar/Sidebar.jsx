@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo1.png";
 import { NavLink } from "react-router-dom";
-import overviewIcon from "../../assets/images/overview.svg";
-import ticketsIcon from "../../assets/images/tickets.svg";
-import ideasIcon from "../../assets/images/ideas.svg";
-import contactsIcon from "../../assets/images/contacts.svg";
-import agentsIcon from "../../assets/images/agents.svg";
-import articlesIcon from "../../assets/images/articles.svg";
-import settingsIcon from "../../assets/images/settings.svg";
-import subscriptionIcon from "../../assets/images/subscription.svg";
+import {
+  FaChartPie,
+  FaTicket,
+  FaLightbulb,
+  FaUserTie,
+  FaAward,
+} from "react-icons/fa6";
+import { LiaBookSolid } from "react-icons/lia";
+import { IoIosPeople } from "react-icons/io";
+import { FiSettings } from "react-icons/fi";
 
 const Sidebar = () => {
   return (
-    <div className=" bg-darkOne text-slate-50 pt-8 flex flex-col gap-12">
+    <div className="sidebar_cont bg-darkOne text-slate-50 pt-8 flex flex-col gap-12">
       <Link
         to="/"
         className="nav_logo flex px-6 items-center gap-8 w-full text-slate-400 transition duration-250 hover:text-slate-50"
@@ -26,42 +28,42 @@ const Sidebar = () => {
           to="/overview"
           className=" transition-all duration-300 flex items-center gap-6 text-slate-400 w-full hover:text-slate-50 hover:bg-greyOne py-3 px-8"
         >
-          <img src={overviewIcon} alt="overview icon" className=" w-9" />
+          <FaChartPie />
           <p>Overview</p>
         </NavLink>
         <NavLink
           to="/tickets"
           className=" transition-all duration-300 flex items-center gap-6 text-slate-400 w-full hover:text-slate-50 hover:bg-greyOne py-3 px-8"
         >
-          <img src={ticketsIcon} alt="tickets icon" className=" w-9" />
+          <FaTicket />
           <p>Tickets</p>
         </NavLink>
         <NavLink
           to="/ideas"
           className=" transition-all duration-300 flex items-center gap-6 text-slate-400 w-full hover:text-slate-50 hover:bg-greyOne py-3 px-8"
         >
-          <img src={ideasIcon} alt="ideas icon" className=" w-9" />
+          <FaLightbulb />
           <p>Ideas</p>
         </NavLink>
         <NavLink
           to="/contacts"
           className=" transition-all duration-300 flex items-center gap-6 text-slate-400 w-full hover:text-slate-50 hover:bg-greyOne py-3 px-8"
         >
-          <img src={contactsIcon} alt="contacts icon" className=" w-9" />
+          <IoIosPeople />
           <p>Contacts</p>
         </NavLink>
         <NavLink
           to="/agents"
           className=" transition-all duration-300 flex items-center gap-6 text-slate-400 w-full hover:text-slate-50 hover:bg-greyOne py-3 px-8"
         >
-          <img src={agentsIcon} alt="agents icon" className=" w-9" />
+          <FaUserTie />
           <p>Agents</p>
         </NavLink>
         <NavLink
           to="/articles"
           className=" transition-all duration-300 flex items-center gap-6 text-slate-400 w-full hover:text-slate-50 hover:bg-greyOne py-3 px-8"
         >
-          <img src={articlesIcon} alt="subscription icon" className=" w-9" />
+          <LiaBookSolid />
           <p>Articles</p>
         </NavLink>
       </div>
@@ -69,17 +71,16 @@ const Sidebar = () => {
         to="/settings"
         className=" transition-all duration-300 flex items-center gap-6 text-slate-400 w-full hover:text-slate-50 hover:bg-greyOne py-3 px-8"
       >
-        <img src={settingsIcon} alt="subscription icon" className=" w-9" />
+        <FiSettings />
         <p>Settings</p>
       </NavLink>
       <NavLink
         to="/subscription"
         className=" transition-all duration-300 flex items-center gap-6 text-slate-400 w-full hover:text-slate-50 hover:bg-greyOne py-3 px-8"
       >
-        <img src={subscriptionIcon} alt="subscription icon" className=" w-9" />
+        <FaAward />
         <p>Subscription</p>
       </NavLink>
-      <div></div>
     </div>
   );
 };

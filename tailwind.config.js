@@ -6,6 +6,7 @@ export default {
       colors: {
         darkOne: "rgba(54, 55, 64, 1)",
         greyOne: "rgba(159, 162, 180, .08)",
+        greyTwo: "rgba(159, 162, 180, 1)",
       },
     },
   },
