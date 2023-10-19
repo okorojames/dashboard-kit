@@ -6,6 +6,7 @@ import {
 import AppLayout from "./src/layouts/AppLayout";
 import Home from "./src/pages/home/Home";
 import Tickets from "./src/pages/tickets/Tickets";
+import PageNotFound from "./src/pages/page-not-found/PageNotFound";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -13,6 +14,7 @@ export const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="overview" element={<Home />} />
       <Route path="tickets" element={<Tickets />} />
+      <Route path="*" element={<PageNotFound />} />
     </Route>
   )
 );

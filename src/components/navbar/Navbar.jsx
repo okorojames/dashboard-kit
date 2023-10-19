@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="py-5 px-8 text-slate-600 flex justify-between items-center mb-12">
       <div className="flex items-center justify-start gap-12">
-        <HiMiniBars3BottomLeft />
+        <HiMiniBars3BottomLeft className="block lg:hidden" />
         <p className=" font-bold font-medium text-3xl">Overview</p>
       </div>
       {/*  */}
