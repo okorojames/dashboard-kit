@@ -19,26 +19,38 @@ const TicketsTableCell = ({ ticket }) => {
             <img src={ticket.img} alt="" className="w-full" />
           </div>
           <div>
-            <h3 className=" font-medium text-2xl">{ticket.desc}</h3>
-            <p className=" font-medium text-lg">Updated {ticket.updated}</p>
+            <h3 className=" font-medium text-2xl whitespace-nowrap">
+              {ticket.desc}
+            </h3>
+            <p className=" font-medium text-lg whitespace-nowrap">
+              Updated {ticket.updated}
+            </p>
           </div>
         </div>
       </TableCell>
       <TableCell align="center">
         <div className="text-slate-600 flex flex-col">
-          <h3 className="text-2xl font-medium">{ticket.name}</h3>
-          <p className="font-medium text-lg text-slate-400">{ticket.date}</p>
+          <h3 className="text-2xl font-medium whitespace-nowrap">
+            {ticket.name}
+          </h3>
+          <p className="font-medium text-lg text-slate-400 whitespace-nowrap">
+            {ticket.date}
+          </p>
         </div>
       </TableCell>
       <TableCell align="center">
         <div className="text-slate-600 flex flex-col">
-          <h3 className="text-2xl font-medium">{ticket.date}</h3>
-          <p className="font-medium text-lg text-slate-400">{ticket.time}</p>
+          <h3 className="text-2xl font-medium whitespace-nowrap">
+            {ticket.date}
+          </h3>
+          <p className="font-medium text-lg text-slate-400 whitespace-nowrap">
+            {ticket.time}
+          </p>
         </div>
       </TableCell>
       <TableCell align="center">
         <div
-          className={`font-medium text-2xl text-slate-50 py-2 px-4 rounded-3xl ${
+          className={`font-medium text-2xl text-slate-50 py-2 px-4 rounded-3xl whitespace-nowrap ${
             ticket.priority === "High"
               ? "bg-red-400"
               : ticket.priority === "Low"

@@ -3,11 +3,16 @@ import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { LuSearch } from "react-icons/lu";
 import { IoNotifications } from "react-icons/io5";
 import userImg from "../../assets/images/header.png";
+import { useLocation } from "react-router-dom";
 
 //
 const Navbar = () => {
   //
   const nav_form_input = useRef();
+
+  const { pathname } = useLocation();
+
+  const title = pathname.split("/")[1];
   //
 
   const showInput = () => {
@@ -19,7 +24,7 @@ const Navbar = () => {
     <nav className="py-5 px-8 text-slate-600 flex justify-between items-center mb-12">
       <div className="flex items-center justify-start gap-12">
         <HiMiniBars3BottomLeft className="block lg:hidden" />
-        <p className=" font-bold font-medium text-3xl">Overview</p>
+        <p className="font-bold font-medium text-3xl capitalize">{title}</p>
       </div>
       {/*  */}
       <div className="flex items-center justify-between gap-8">
@@ -38,7 +43,7 @@ const Navbar = () => {
         </div>
         {/*  */}
         <div className="flex items-center gap-2">
-          <span className="font-medium">Jones Ferdinand</span>
+          <span className="font-medium hidden md:block">Jones Ferdinand</span>
           <span className="overflow-hidden rounded-full">
             <img src={userImg} alt="user image" />
           </span>

@@ -89,6 +89,7 @@ nav svg {
 .all_tickets th {
   font-size: 1.4rem;
   color: rgba(159, 162, 180, 1);
+  white-space: nowrap;
 }
 
 .tickets_table::-webkit-scrollbar {
