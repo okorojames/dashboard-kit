@@ -47,7 +47,7 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className="sidebar_cont bg-darkOne text-slate-50 pt-8 flex flex-col gap-10 pb-5 fixed top-0 lg:relative w-sidebarOne"
+        className="sidebar_cont bg-darkOne text-slate-50 pt-8 flex flex-col gap-10 pb-5 fixed top-0 lg:sticky w-sidebarOne"
         ref={side_bar}
       >
         <Link

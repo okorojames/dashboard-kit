@@ -6,7 +6,7 @@ const AppLayout = () => {
   return (
     <>
       <GetToTop />
-      <div className="app_layout relative grid grid-cols-1 lg:grid-cols-appCols items-stretch">
+      <div className="app_layout relative grid grid-cols-1 lg:grid-cols-appCols items-start">
         <Sidebar />
         <div className="main_pages w-full">
           <Outlet />

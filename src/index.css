@@ -55,6 +55,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sidebar_cont {
+  min-height: 100vh;
   z-index: 999;
 }
 
@@ -151,6 +152,32 @@ nav svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.overview_tasks_check {
+  position: relative;
+  appearance: none;
+}
+
+.overview_tasks_check::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.3px rgba(159, 162, 180, 0.6);
+  padding: 1px;
+  padding-left: 3px;
+}
+
+.overview_tasks_check:checked.overview_tasks_check::before {
+  content: "✔";
+  color: rgb(238, 241, 255);
+  background: rgba(74, 89, 255, 0.724);
+  box-shadow: none;
 }
 
 @media screen and (max-width: 1024px) {

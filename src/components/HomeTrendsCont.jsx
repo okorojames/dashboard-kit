@@ -24,7 +24,7 @@ const HomeTrendsCont = () => {
         </div>
       </div>
       {/*  */}
-      <div className="flex items-center justify-center flex-col text-center gap-8 w-1/2">
+      <div className="flex items-center justify-center flex-col text-center gap-8 w-full mdThree:w-1/2">
         <div className="py-4 border-b-2 border-slate-300 w-full">
           <p className="text-2xl font-medium text-slate-500 mb-4">Resolved</p>
           <h3 className="font-bold text-3xl">449</h3>
