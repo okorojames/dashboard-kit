@@ -6,7 +6,7 @@ const PageNotFound = () => {
   return (
     <div className="page_not_found_holder">
       <p className="page_not_found_text text-xl">Page Not Found</p>
-      <Link className="page_not_found_text_2 text-4xl" to="/">
+      <Link className="page_not_found_text_2 text-4xl bg-slate-300" to="/">
         <BsArrowLeftShort />
         Homepage
       </Link>

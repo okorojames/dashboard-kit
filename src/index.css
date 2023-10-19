@@ -22,6 +22,7 @@ html {
 
 body {
   font-size: 1.4rem;
+  overflow-x: hidden !important;
 }
 
 body::-webkit-scrollbar {
@@ -41,6 +42,20 @@ body::-webkit-scrollbar-thumb {
 .sidebar_links a.active {
   background: rgba(159, 162, 180, 0.08);
   color: #fafafa;
+}
+
+.sidebar_over_lay {
+  background: rgba(49, 49, 50, 0.85);
+  backdrop-filter: blur(1.5px);
+  z-index: 998;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.sidebar_cont {
+  z-index: 999;
 }
 
 .sidebar_cont a svg {
@@ -65,6 +80,19 @@ nav svg {
 .showInput.nav_form {
   box-shadow: 0 0 0 0.13rem rgba(159, 162, 180, 0.6);
   border-radius: 0.8rem;
+}
+
+.mobile_search_box {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+}
+
+.show_mobile_search_box.mobile_search_box {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 .showInput .nav_form_input {
@@ -119,9 +147,33 @@ nav svg {
   pointer-events: all;
 }
 
+.nav_mobile_form {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 1024px) {
   .sidebar_cont {
     transition: 0.35s ease-in-out;
     left: -200%;
   }
+}
+
+@media screen and (max-width: 476px) {
+  .dash_boxes_row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.show_side_bar.sidebar_cont {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.show_side_bar_overlay.sidebar_over_lay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
