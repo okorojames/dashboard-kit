@@ -209,6 +209,7 @@ nav svg {
 
 #dark .css-15wwp11-MuiTableHead-root th {
   background: rgba(54, 55, 64, 1);
+  color: #fafafa !important;
 }
 
 #dark .css-8coetn {
@@ -216,6 +217,10 @@ nav svg {
 }
 
 #dark .css-1xnox0e {
+  background: rgba(54, 55, 64, 1);
+}
+
+#dark .css-nw3mfz {
   background: rgba(54, 55, 64, 1);
 }
 
