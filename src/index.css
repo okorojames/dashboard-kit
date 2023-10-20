@@ -202,9 +202,13 @@ nav svg {
 
 /*  */
 /*  */
+#dark .css-1yka45i {
+  background-color: rgba(54, 55, 64, 1);
+}
+
 #dark .css-pll7g2-MuiPaper-root-MuiTableContainer-root {
-  background: rgba(54, 55, 64, 1);
-  color: #f3f3f3;
+  background: rgba(54, 55, 64, 1) !important;
+  color: #f3f3f3 !important;
 }
 
 #dark .css-15wwp11-MuiTableHead-root th {
