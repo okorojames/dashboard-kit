@@ -102,7 +102,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="search..."
-              className={`nav_form_input border-0 outline-none ${
+              className={`nav_form_input border-0 outline-none bg-transparent ${
                 theme === "dark" ? "text-slate-50" : "text-slate-500"
               }`}
             />
