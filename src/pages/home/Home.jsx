@@ -1,17 +1,7 @@
 import DashBoxes from "../../components/DashBoxes";
 import HomeFooter from "../../components/HomeFooter";
 import HomeTrendsCont from "../../components/HomeTrendsCont";
-// import { data } from "../../components/data";
 import Navbar from "../../components/navbar/Navbar";
-// import {
-//   LineChart,
-//   Line,
-//   XAxis,
-//   YAxis,
-//   CartesianGrid,
-//   Tooltip,
-//   Legend,
-// } from "recharts";
 
 const Home = () => {
   //

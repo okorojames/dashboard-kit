@@ -19,23 +19,23 @@ const HomeFooter = () => {
         </div>
         {/*  */}
         <div className="flex flex-col gap-8 mt-8">
-          <div className="flex justify-between items-center py-4 px-6 hover:bg-slate-100 cursor-pointer border-b-2 border-slate-300">
+          <div className="flex justify-between items-center py-4 px-6 hover:bg-slate-100 cursor-pointer border-b-2 border-slate-200">
             <p className="font-medium text-slate-600">
               Waiting on feature request
             </p>
             <p className="text-slate-400">4238</p>
           </div>
-          <div className="flex justify-between items-center py-4 px-6 hover:bg-slate-100 cursor-pointer border-b-2 border-slate-300">
+          <div className="flex justify-between items-center py-4 px-6 hover:bg-slate-100 cursor-pointer border-b-2 border-slate-200">
             <p className="font-medium text-slate-600">
               Awaiting customer response
             </p>
             <p className="text-slate-400">1003</p>
           </div>
-          <div className="flex justify-between items-center py-4 px-6 hover:bg-slate-100 cursor-pointer border-b-2 border-slate-300">
+          <div className="flex justify-between items-center py-4 px-6 hover:bg-slate-100 cursor-pointer border-b-2 border-slate-200">
             <p className="font-medium text-slate-600">Awaiting dev fix</p>
             <p className="text-slate-400">224</p>
           </div>
-          <div className="flex justify-between items-center py-4 px-6 hover:bg-slate-100 cursor-pointer border-b-2 border-slate-300">
+          <div className="flex justify-between items-center py-4 px-6 hover:bg-slate-100 cursor-pointer ">
             <p className="font-medium text-slate-600">Pending</p>
             <p className="text-slate-400">15</p>
           </div>
@@ -58,19 +58,24 @@ const HomeFooter = () => {
               className="w-full border-none outline-none py-2 placeholder:text-xl"
               placeholder="create new task"
             />
-            <BiPlus className="text-5xl text-slate-600" />
+            <BiPlus className="text-5xl text-slate-600 cursor-pointer" />
           </div>
           {/*  */}
           <div className="flex justify-between items-center gap-20 border-b-2 border-slate-200 py-3">
             <div className="flex items-center gap-8">
               <input
                 type="checkbox"
-                id="overview_check_task"
+                id="overview_check_task_a"
                 className="overview_tasks_check"
               />
-              <label htmlFor="overview_check_task">Finish ticket Update</label>
+              <label
+                htmlFor="overview_check_task_a"
+                className="cursor-pointer select-none"
+              >
+                Finish ticket Update
+              </label>
             </div>
-            <div className="text-slate-100 bg-yellow-500 rounded-2xl py-3 px-6">
+            <div className="text-slate-100 bg-yellow-500 cursor-pointer rounded-2xl py-3 px-6 select-none">
               Urgent
             </div>
           </div>
@@ -79,12 +84,17 @@ const HomeFooter = () => {
             <div className="flex items-center gap-8">
               <input
                 type="checkbox"
-                id="overview_check_task"
+                id="overview_check_task_b"
                 className="overview_tasks_check"
               />
-              <label htmlFor="overview_check_task">Finish ticket Update</label>
+              <label
+                htmlFor="overview_check_task_b"
+                className="cursor-pointer select-none"
+              >
+                Create new ticket example
+              </label>
             </div>
-            <div className="text-slate-100 bg-green-500 rounded-2xl py-3 px-6">
+            <div className="text-slate-100 bg-green-500 cursor-pointer rounded-2xl py-3 px-6 select-none">
               New
             </div>
           </div>
@@ -93,13 +103,18 @@ const HomeFooter = () => {
             <div className="flex items-center gap-8">
               <input
                 type="checkbox"
-                checked={true}
-                id="overview_check_task"
+                defaultChecked={true}
+                id="overview_check_task_c"
                 className="overview_tasks_check"
               />
-              <label htmlFor="overview_check_task">Finish ticket Update</label>
+              <label
+                htmlFor="overview_check_task_c"
+                className="cursor-pointer select-none"
+              >
+                Update ticket report
+              </label>
             </div>
-            <div className="text-slate-700 bg-slate-200 rounded-2xl py-3 px-6">
+            <div className="text-slate-700 bg-slate-200 cursor-pointer rounded-2xl py-3 px-6 select-none">
               Default
             </div>
           </div>

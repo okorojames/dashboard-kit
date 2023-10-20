@@ -28,6 +28,7 @@ export default {
         greyOne: "rgba(159, 162, 180, .08)",
         greyTwo: "rgba(159, 162, 180, 1)",
         greyThree: "rgba(10, 10, 10, .85)",
+        greyFour: "rgba(54, 55, 64, 1)",
       },
       gridTemplateColumns: {
         appCols: "220px, 1fr",

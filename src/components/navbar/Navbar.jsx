@@ -9,6 +9,9 @@ import { NavContext } from "../../contexts/ToggleNavContext";
 import { useEffect } from "react";
 import { useState } from "react";
 import { LiaTimesSolid } from "react-icons/lia";
+import { Theme } from "../../contexts/ThemeContext";
+import { FaSun } from "react-icons/fa";
+import { BsMoonStarsFill } from "react-icons/bs";
 
 //
 const Navbar = () => {
@@ -46,10 +49,15 @@ const Navbar = () => {
 
   //
   const { show_side_nav } = useContext(NavContext);
+  const { theme, toggleTheme } = useContext(Theme);
 
   //
   return (
-    <nav className="py-5 px-8 text-slate-600 flex justify-between items-center mb-12">
+    <nav
+      className={`py-5 px-8 ${
+        theme === "dark" ? "text-slate-50" : "text-slate-600"
+      } flex justify-between items-center mb-12`}
+    >
       <div className="flex items-center justify-start gap-12">
         <HiMiniBars3BottomLeft
           className="block lg:hidden"
@@ -62,7 +70,9 @@ const Navbar = () => {
         {mobileSearch ? (
           <>
             <LuSearch
-              className=" text-slate-400"
+              className={` ${
+                theme === "dark" ? "text-slate-50" : "text-slate-400"
+              }`}
               onClick={show_mobile_search_box}
             />
             <div
@@ -78,7 +88,7 @@ const Navbar = () => {
                 <LuSearch className=" text-slate-500" />
               </form>
               <LiaTimesSolid
-                className="text-slate-50 text-5xl absolute top-20 right-20"
+                className={`text-slate-50 text-5xl absolute top-20 right-20`}
                 onClick={show_mobile_search_box}
               />
             </div>
@@ -92,15 +102,31 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="search..."
-              className="nav_form_input border-0 outline-none text-slate-400"
+              className={`nav_form_input border-0 outline-none ${
+                theme === "dark" ? "text-slate-50" : "text-slate-500"
+              }`}
             />
-            <LuSearch className=" text-slate-400" onClick={showInput} />
+            <LuSearch
+              className={` ${
+                theme === "dark" ? "text-slate-50" : "text-slate-400"
+              }`}
+              onClick={showInput}
+            />
           </form>
+        )}
+        {theme === "light" ? (
+          <BsMoonStarsFill className="text-3xl" onClick={toggleTheme} />
+        ) : (
+          <FaSun className="text-3xl" onClick={toggleTheme} />
         )}
         {/*  */}
         <div className="text-slate-400 relative">
           <div className="w- bg-blue-500 rounded-full h-4 w-4 top-0 right-0 border-2 border-slate-50 absolute"></div>
-          <IoNotifications />
+          <IoNotifications
+            className={`${
+              theme === "dark" ? "text-slate-50" : "text-slate-700"
+            }`}
+          />
         </div>
         {/*  */}
         <div className="flex items-center gap-2">

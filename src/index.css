@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --darkBg: rgba(54, 55, 64, 1);
+}
+
 /*  */
 *::before,
 *::after,
@@ -37,6 +41,16 @@ body::-webkit-scrollbar-thumb {
 
 .app_layout {
   min-height: 100vh;
+  transition: 0.3s ease-in-out;
+}
+
+#dark.app_layout {
+  /* background: rgb(75, 85, 99); */
+  background: rgba(54, 55, 64, 0.9);
+}
+
+#dark .main_pages {
+  box-shadow: inset 4px 0 12px rgba(54, 50, 75, 0.7);
 }
 
 .sidebar_links a.active {
@@ -71,7 +85,6 @@ nav svg {
 .nav_form_input {
   width: 0px;
   transition: 0.5s;
-  padding: 0.4rem 1rem;
 }
 
 .nav_form {
@@ -79,6 +92,7 @@ nav svg {
 }
 
 .showInput.nav_form {
+  padding: 0.4rem 1rem;
   box-shadow: 0 0 0 0.13rem rgba(159, 162, 180, 0.6);
   border-radius: 0.8rem;
 }
@@ -113,6 +127,15 @@ nav svg {
 
 .dash_boxes:hover h4 {
   color: rgba(74, 89, 255, 0.724);
+}
+
+#dark .dash_boxes:hover h4 {
+  color: rgba(218, 221, 255, 0.724);
+}
+
+#dark .dash_boxes:hover {
+  box-shadow: 0 0 0 1.5px rgba(199, 204, 253, 0.724);
+  color: rgba(197, 201, 248, 0.724);
 }
 
 .all_tickets th {
@@ -171,6 +194,7 @@ nav svg {
   box-shadow: 0 0 0 1.3px rgba(159, 162, 180, 0.6);
   padding: 1px;
   padding-left: 3px;
+  cursor: pointer;
 }
 
 .overview_tasks_check:checked.overview_tasks_check::before {
@@ -179,6 +203,50 @@ nav svg {
   background: rgba(74, 89, 255, 0.724);
   box-shadow: none;
 }
+
+/*  */
+/*  */
+#dark .css-pll7g2-MuiPaper-root-MuiTableContainer-root {
+  background: var(--darkBg);
+  color: #f3f3f3;
+}
+
+#dark .css-15wwp11-MuiTableHead-root tr th {
+  background: var(--darkBg);
+}
+
+#dark .css-1q1u3t4-MuiTableRow-root p,
+#dark .css-1q1u3t4-MuiTableRow-root h3,
+#dark .css-1q1u3t4-MuiTableRow-root svg {
+  color: #f3f3f3;
+}
+
+#dark .recharts-layer.recharts-cartesian-axis.recharts-xAxis.xAxis line {
+  stroke: #f3f3f3;
+}
+#dark tspan {
+  opacity: 0.7;
+  fill: #f3f3f3;
+}
+
+#dark .trends_cont p {
+  color: #fefefe;
+  opacity: 0.7;
+}
+
+#dark .trends_cont h3 {
+  color: #fefefe;
+}
+
+#dark .trends_cont div {
+  color: #fefefe;
+}
+
+#dark .recharts-layer.recharts-cartesian-axis.recharts-yAxis.yAxis line {
+  stroke: #fefefe;
+}
+/*  */
+/*  */
 
 @media screen and (max-width: 1024px) {
   .sidebar_cont {

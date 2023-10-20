@@ -1,8 +1,18 @@
+import { useContext } from "react";
+import HomeTrendsChart from "./HomeTrendsChart";
+import { Theme } from "../contexts/ThemeContext";
+
 const HomeTrendsCont = () => {
+  const { theme } = useContext(Theme);
+  //
   return (
-    <div className="mt-6 text-slate-700 flex items-stretch justify-between gap-40 flex-wrap mdThree:flex-nowrap shadow-shadow_one rounded-xl p-6 mb-32">
+    <div
+      className={`trends_cont mt-6 ${
+        theme === "dark" ? "text-slate-100" : "text-slate-700"
+      } flex items-stretch justify-between gap-40 flex-wrap mdThree:flex-nowrap shadow-shadow_one rounded-xl p-6 mb-32`}
+    >
       <div className="w-full">
-        <div className="flex justify-between items-end gap-4 w-full">
+        <div className="flex flex-wrap justify-between items-end gap-4 w-full">
           <div className="flex flex-col gap-2">
             <h3 className="text-slate-700 font-bold text-3xl">
               Today{"'s"} Trend
@@ -22,6 +32,7 @@ const HomeTrendsCont = () => {
             </div>
           </div>
         </div>
+        <HomeTrendsChart />
       </div>
       {/*  */}
       <div className="flex items-center justify-center flex-col text-center gap-8 w-full mdThree:w-1/2">
