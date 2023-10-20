@@ -5,10 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --darkBg: rgba(54, 55, 64, 1);
-}
-
 /*  */
 *::before,
 *::after,
@@ -207,12 +203,12 @@ nav svg {
 /*  */
 /*  */
 #dark .css-pll7g2-MuiPaper-root-MuiTableContainer-root {
-  background: var(--darkBg);
+  background: rgba(54, 55, 64, 1);
   color: #f3f3f3;
 }
 
 #dark .css-15wwp11-MuiTableHead-root tr th {
-  background: var(--darkBg);
+  background: rgba(54, 55, 64, 1);
 }
 
 #dark .css-1q1u3t4-MuiTableRow-root p,
