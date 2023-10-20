@@ -120,7 +120,11 @@ const HomeFooter = () => {
         </div>
         {/*  */}
         <div className="flex flex-col gap-8 mt-8">
-          <div className="flex justify-between items-center gap-20 border-b-2 border-slate-200 py-3">
+          <div
+            className={`flex justify-between items-center gap-20 border-b-2 ${
+              theme === "dark" ? "border-gray-500" : "border-slate-200"
+            } py-3`}
+          >
             <input
               type="text"
               className={`w-full border-none outline-none py-2 placeholder:text-xl ${
@@ -135,7 +139,11 @@ const HomeFooter = () => {
             />
           </div>
           {/*  */}
-          <div className="flex justify-between items-center gap-20 border-b-2 border-slate-200 py-3">
+          <div
+            className={`flex justify-between items-center gap-20 border-b-2 ${
+              theme === "dark" ? "border-gray-500" : "border-slate-200"
+            } py-3`}
+          >
             <div className="flex items-center gap-8">
               <input
                 type="checkbox"
@@ -156,7 +164,11 @@ const HomeFooter = () => {
             </div>
           </div>
           {/*  */}
-          <div className="flex justify-between items-center gap-20 border-b-2 border-slate-200 py-3">
+          <div
+            className={`flex justify-between items-center gap-20 border-b-2 ${
+              theme === "dark" ? "border-gray-500" : "border-slate-200"
+            } py-3`}
+          >
             <div className="flex items-center gap-8">
               <input
                 type="checkbox"

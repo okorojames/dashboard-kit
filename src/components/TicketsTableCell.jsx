@@ -67,18 +67,18 @@ const TicketsTableCell = ({ ticket }) => {
             onClick={show_ticket_data_menu}
             className="text-4xl text-slate-500 font-medium cursor-pointer hover:text-red-400 transition ease-in-out duration-300"
           />
-          <div
+          <span
             className="tickets_data_menu absolute flex flex-col gap-6 bg-slate-50 py-6 px-8 rounded-lg shadow-shadow_one"
             ref={tickets_data_menu}
           >
-            <p className="flex justify-between items-center gap-3 text-lg cursor-pointer">
+            <span className="ticket_edit_opt flex justify-between items-center gap-3 text-lg cursor-pointer">
               {" "}
               Edit <FiEdit />
-            </p>
-            <p className="flex justify-between items-center gap-3 text-red-500 text-lg cursor-pointer">
+            </span>
+            <span className="ticket_delete_opt flex justify-between items-center gap-3 text-red-500 text-lg cursor-pointer">
               Delete <MdDelete />
-            </p>
-          </div>
+            </span>
+          </span>
         </div>
       </TableCell>
     </>

@@ -245,6 +245,14 @@ nav svg {
 #dark .recharts-layer.recharts-cartesian-axis.recharts-yAxis.yAxis line {
   stroke: #fefefe;
 }
+
+#dark .ticket_delete_opt svg {
+  color: rgba(255, 83, 74, 0.724);
+}
+
+#dark .ticket_edit_opt svg {
+  color: rgba(19, 19, 19, 0.724);
+}
 /*  */
 /*  */
 
