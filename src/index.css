@@ -205,6 +205,10 @@ nav svg {
 #dark .css-1yka45i {
   background-color: rgba(54, 55, 64, 1);
 }
+#dark .css-1yka45i h,
+#dark .css-1yka45i p {
+  background-color: rgb(238, 241, 255);
+}
 
 #dark .css-pll7g2-MuiPaper-root-MuiTableContainer-root {
   background: rgba(54, 55, 64, 1) !important;
