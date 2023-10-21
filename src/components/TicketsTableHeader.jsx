@@ -12,7 +12,7 @@ const TicketsTableHeader = () => {
         theme === "dark" && "bg-greyFour"
       } flex justify-between items-center px-4 py-6 rounded-tl-2xl rounded-tr-2xl`}
     >
-      <p className="font-bold text-2xl">All Tcikets</p>
+      <p className="font-bold text-2xl">All Tickets</p>
       <div className="flex justify-between items-center gap-12">
         <p
           className={`flex items-center justify-between gap-4 transition duration-500 cursor-pointer ${
